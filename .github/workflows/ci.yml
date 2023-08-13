@@ -4,13 +4,14 @@ on:
   push:
     branches:
       - master
+      - test/mqtt-psk
   pull_request:
   schedule:
     - cron: "50 6 * * *"
   workflow_dispatch:
 
 env:
-  rust_toolchain: nightly
+  rust_toolchain: nightly-2023-08-07
   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 jobs:
